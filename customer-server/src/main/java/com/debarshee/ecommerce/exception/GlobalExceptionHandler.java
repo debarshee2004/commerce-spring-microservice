@@ -1,6 +1,5 @@
-package com.debarshee.ecommerce.handler;
+package com.debarshee.ecommerce.exception;
 
-import com.debarshee.ecommerce.exception.CustomerNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
