@@ -3,11 +3,15 @@ package com.debarshee.ecommerce.service;
 import com.debarshee.ecommerce.exception.CustomerNotFoundException;
 import com.debarshee.ecommerce.model.Customer;
 import com.debarshee.ecommerce.records.CustomerRequest;
+import com.debarshee.ecommerce.records.CustomerResponse;
 import com.debarshee.ecommerce.repository.CustomerRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.lang.String.format;
 
@@ -44,6 +48,13 @@ public class CustomerService {
         if(request.address() != null) {
             customer.setAddress(request.address());
         }
+    }
+
+    public List<CustomerResponse> getAllCustomers() {
+        return  this.repository.findAll()
+                .stream()
+                .map(this.mapper::fromCustomer)
+                .collect(Collectors.toList());
     }
 }
 

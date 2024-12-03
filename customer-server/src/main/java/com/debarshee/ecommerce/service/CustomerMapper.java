@@ -2,6 +2,7 @@ package com.debarshee.ecommerce.service;
 
 import com.debarshee.ecommerce.model.Customer;
 import com.debarshee.ecommerce.records.CustomerRequest;
+import com.debarshee.ecommerce.records.CustomerResponse;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +20,19 @@ public class CustomerMapper {
                 .lastname(request.lastname())
                 .address(request.address())
                 .build();
+    }
+
+    public CustomerResponse fromCustomer(Customer customer) {
+        if (customer == null) {
+            return null;
+        }
+        return new CustomerResponse(
+                customer.getId(),
+                customer.getUsername(),
+                customer.getEmail(),
+                customer.getFirstname(),
+                customer.getLastname(),
+                customer.getAddress()
+        );
     }
 }

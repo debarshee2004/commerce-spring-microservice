@@ -1,14 +1,14 @@
 package com.debarshee.ecommerce.controller;
 
-import com.debarshee.ecommerce.model.Customer;
 import com.debarshee.ecommerce.records.CustomerRequest;
+import com.debarshee.ecommerce.records.CustomerResponse;
 import com.debarshee.ecommerce.service.CustomerService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/vi/customer")
@@ -20,7 +20,7 @@ public class CustomerControllers {
     public ResponseEntity<String> createCustomer(
             @RequestBody @Valid CustomerRequest request
     ) {
-        return ResponseEntity.ok(service.createCustomer(request));
+        return ResponseEntity.ok(this.service.createCustomer(request));
     }
 
     @PutMapping
@@ -29,5 +29,10 @@ public class CustomerControllers {
     ) {
         service.updateCustomer(request);
         return ResponseEntity.accepted().build();
+    }
+
+    @GetMapping
+    public ResponseEntity<List<CustomerResponse>> getAllCustomers() {
+        return ResponseEntity.ok(this.service.getAllCustomers());
     }
 }
