@@ -56,5 +56,17 @@ public class CustomerService {
                 .map(this.mapper::fromCustomer)
                 .collect(Collectors.toList());
     }
+
+    public Boolean existsById(String customerId) {
+        return this.repository.findById(customerId).isPresent();
+    }
+
+    public CustomerResponse getById(String customerId) {
+        return this.repository.findById(customerId)
+                .map(mapper::fromCustomer)
+                .orElseThrow(() -> new CustomerNotFoundException(
+                        format("No customer found with the provided ID: %s", customerId)
+                ));
+    }
 }
 

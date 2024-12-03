@@ -35,4 +35,18 @@ public class CustomerControllers {
     public ResponseEntity<List<CustomerResponse>> getAllCustomers() {
         return ResponseEntity.ok(this.service.getAllCustomers());
     }
+
+    @GetMapping("/exists/{customer-id}")
+    public ResponseEntity<Boolean> existsById (
+            @PathVariable("customer-id") String customerId
+    ) {
+        return ResponseEntity.ok(this.service.existsById(customerId));
+    }
+
+    @GetMapping("/{customer-id}")
+    public ResponseEntity<CustomerResponse> getById (
+            @PathVariable("customer-id") String customerId
+    ) {
+        return ResponseEntity.ok(this.service.getById(customerId));
+    }
 }
