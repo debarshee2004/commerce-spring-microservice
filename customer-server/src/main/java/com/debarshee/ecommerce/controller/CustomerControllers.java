@@ -20,6 +20,6 @@ public class CustomerControllers {
     public ResponseEntity<String> createCustomer(
             @RequestBody @Valid CustomerRequest request
     ) {
-        return null;
+        return ResponseEntity.ok(service.create(request));
     }
 }
