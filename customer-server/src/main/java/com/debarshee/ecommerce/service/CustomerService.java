@@ -68,5 +68,9 @@ public class CustomerService {
                         format("No customer found with the provided ID: %s", customerId)
                 ));
     }
+
+    public void deleteCustomer(String customerId) {
+        this.repository.deleteById(customerId);
+    }
 }
 
