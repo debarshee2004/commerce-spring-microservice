@@ -1,4 +1,4 @@
-# Commerce Microservice Application using spring Framework
+# Commerce Microservice Application using Spring Framework
 
 ## Application Architecture
 ![micro-services-global-architecture](https://github.com/user-attachments/assets/76edbb04-7479-4646-b474-e675a70c1bc3)
@@ -22,7 +22,7 @@ docker compose down
 ```
 
 > [!NOTE]
-> To run individual services which is recommended if you have a old computer just like I do, use this following syntax. Replace the `<service name>` with the service _(refer to [docker-compose.yml](docker-compose.yml) file for the service names)_ you want to run in isolation.
+> To run individual services, which is recommended, if you have an old computer just like I do, use the following syntax. Replace the `<service name>` with the required service name _(refer to [docker-compose.yml](docker-compose.yml) file for the service names)_ you want to run in isolation.
 
 ```shell
 docker compose up <service name>
