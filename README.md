@@ -22,7 +22,7 @@ docker compose down
 ```
 
 > [!NOTE]
-> To run individual services which is recommended if you have a old computer just like I do use this following syntax.
+> To run individual services which is recommended if you have a old computer just like I do, use this following syntax. Replace the `<service name>` with the service _(refer to [docker-compose.yml](docker-compose.yml) file for the service names)_ you want to run in isolation.
 
 ```shell
 docker compose up <service name>
