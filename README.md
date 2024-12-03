@@ -1,10 +1,10 @@
 # Commerce Microservice Application using spring Framework
 
 ## Application Architecture
-![micro-services-global-architecture](https://github.com/user-attachments/assets/e2a069d1-74e1-4e98-b533-746bb32794d5)
+![micro-services-global-architecture](https://github.com/user-attachments/assets/76edbb04-7479-4646-b474-e675a70c1bc3)
 
 ## Application Data Modelling
-![commerce spring microservice](https://github.com/user-attachments/assets/f1052b75-0595-4b4c-89f8-03e3b706ffa3)
+![commerce spring microservice](https://github.com/user-attachments/assets/0cc2fcee-e574-41f5-a40a-eb16e5c95027)
 
 ## Docker Compose Containers
 
