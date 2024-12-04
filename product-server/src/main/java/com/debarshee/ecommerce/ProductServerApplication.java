@@ -1,4 +1,4 @@
-package com.debarshee.product_server;
+package com.debarshee.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

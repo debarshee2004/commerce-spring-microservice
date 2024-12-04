@@ -1,4 +1,4 @@
-package com.debarshee.product_server;
+package com.debarshee.ecommerce;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
