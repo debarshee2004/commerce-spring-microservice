@@ -4,9 +4,9 @@ import com.debarshee.ecommerce.model.Customer;
 import com.debarshee.ecommerce.records.CustomerRequest;
 import com.debarshee.ecommerce.records.CustomerResponse;
 import jakarta.validation.Valid;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class CustomerMapper {
     public Customer toCustomer(@Valid CustomerRequest request) {
         if (request == null) {
