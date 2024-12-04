@@ -34,14 +34,16 @@ public class ProductController {
     }
 
     @GetMapping("/{product-id}")
-    public ResponseEntity<ProductResponse> findById(
+    public ResponseEntity<ProductResponse> getById(
             @PathVariable("product-id") Integer productId
     ) {
-        return ResponseEntity.ok(service.findById(productId));
+        return ResponseEntity.ok(service.getById(productId));
     }
 
     @GetMapping
-    public ResponseEntity<List<ProductResponse>> findAll() {
-        return ResponseEntity.ok(service.findAll());
+    public ResponseEntity<List<ProductResponse>> getAll() {
+        return ResponseEntity.ok(service.getAll());
     }
+
+    // TODO: Create Update and Delete CRUD Operations
 }

@@ -30,13 +30,13 @@ public class ProductService {
         return repository.save(product).getId();
     }
 
-    public ProductResponse findById(Integer id) {
+    public ProductResponse getById(Integer id) {
         return repository.findById(id)
                 .map(mapper::toProductResponse)
                 .orElseThrow(() -> new EntityNotFoundException("Product not found with ID:: " + id));
     }
 
-    public List<ProductResponse> findAll() {
+    public List<ProductResponse> getAll() {
         return repository.findAll()
                 .stream()
                 .map(mapper::toProductResponse)
