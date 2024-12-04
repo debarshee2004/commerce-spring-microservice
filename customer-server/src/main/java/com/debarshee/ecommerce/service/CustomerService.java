@@ -15,8 +15,8 @@ import java.util.stream.Collectors;
 
 import static java.lang.String.format;
 
-@RequiredArgsConstructor
 @Service
+@RequiredArgsConstructor
 public class CustomerService {
 
     public final CustomerRepository repository;
@@ -42,7 +42,7 @@ public class CustomerService {
         }
 
         if (StringUtils.isNotBlank(request.lastname())) {
-            customer.setFirstname(request.lastname());
+            customer.setLastname(request.lastname());
         }
 
         if(request.address() != null) {
