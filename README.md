@@ -1,10 +1,7 @@
 # Commerce Microservice Application using Spring Framework
 
 ## Application Architecture
-![Commerce Spring Microservice using Cloud and Cloud Native Tools Project System Design Diagram](https://github.com/user-attachments/assets/bf134ba2-bc2c-4f19-8b83-ef66957f5221)
-
-## Application Data Modelling
-![commerce spring microservice](https://github.com/user-attachments/assets/0cc2fcee-e574-41f5-a40a-eb16e5c95027)
+![csm](https://github.com/user-attachments/assets/0558bbd7-cfdf-4883-bddc-dee6ca921aaa)
 
 ## Docker Compose Containers
 
