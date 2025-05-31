@@ -1,7 +1,7 @@
 # Commerce Microservice Application using Spring Framework
 
 ## Application Architecture
-![csm](https://github.com/user-attachments/assets/0558bbd7-cfdf-4883-bddc-dee6ca921aaa)
+![image](https://github.com/user-attachments/assets/30a2d5b9-989e-49ea-914f-9ace3197173b)
 
 ## Docker Compose Containers
 
